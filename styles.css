@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-image: url(Images/DylanJOB3.jpg);
+    background-size: cover; /* Ensure the image covers the whole area */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+    background-color: #091b29; /* Fallback color */
+    color: #ededed;
+}
+
+/* Nav Bar */
+.header {
+    position: top;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo {
+    font-size: 30px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo-job-title {
+    color: red; 
+}
+
+.nav-bar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+.nav-bar a:hover,
+.nav-bar a.active {
+    color: red;
+}
+
+/* Home */
+.home {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.home-content h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: red;
+}
+
+.home-content p {
+    padding-top: 8px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* About */
+
+.about {
+    padding: 80px 10%; /* Adjust padding to create space */
+    background-color: #091b29; /* Optional: Same background color for consistency */
+    color: #ededed;
+}
+
+.row {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: left; /* Center items vertically */
+    flex-wrap: wrap; /* Space between the image and the text */
+}
+
+.about-col-1 img {
+    width: 100%; 
+    max-width: 525px; 
+    height: auto; 
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex: 1; /* Allow text to take up remaining space */
+    text-align: left; /* Align text to the left */
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.about-me-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.about-me-para {
+    padding-top: 8px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.719);
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content:'';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 20px 0;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+.tab-contents ul li span {
+    color: red;
+    font-size: 16px;
+
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}

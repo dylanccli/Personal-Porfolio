@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Dylan's Personal Portfolio</a>
+        <nav class="nav-bar">
+            <a href="#">Home</a>
+            <a href="#about-me">About Me</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+<!--  Home  -->
+    <section class="home">
+        <div class="home-content">
+           <h1>Hi, I'm Dylan Li </h1>
+            <h3>Computer Engineer</h3>
+            <p>Hello! My name is Dylan Li and I am a 4th year Computer Engineering Student at Toronto Metropolitan University. I am currently looking for any job/internship opportunities. Feel free to reach out to me through my contact page.</p>
+        </div>
+    </section>
+<!--  About  -->
+    <section class="about" id="about-me">
+        <div class="about-content">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/DylanJOB4.jpg" alt="Personal Image">        
+                </div>
+                <div class="about-col-2">
+                    <h1 class="about-me-title">About Me</h1>
+                    <p class="about-me-para">I was born and raised in Ajax, Ontario and ive always enjoyed coding. I first started coding in Highschool and ive continued it ever since. If I could breifly describe myself, I would say I am an introverted, extrovert who likes to spend time with friends and family, play games and sports on my free time.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend</span><br>HTML<br>CSS<br>JavaScript</li>
+                            <li><span>Backend</span><br>Python<br>Java<br>C</li>
+                            <li><span>Other</span><br>SQL<br>Linux<br>VHDL<br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016-2020</span><br>Notre-Dame Catholic Secondary School</li>
+                            <li><span>2020-2025</span><br>Toronto Metropolitan University</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="hobbies">
+                        <ul>
+                            <li><span>Sports</span><br>Basketball, Volleyball,Golf, Tennis, </li>
+                            <li><span>Video Games</span><br>Valorant, TFT, Maplestory, Minecraft </li>
+                            <li><span>Working Out</span><br>Strength Training</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>    
+</body>
+
+</html>
